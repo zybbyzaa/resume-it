@@ -1,21 +1,18 @@
 ---
-update_time: '2017.08.06'
-name: 张睿武
-nickname: xiao555
-meta_content: 大三前端狗，HR姐姐们把我招到碗里去吧
-keywords: xiao555,前端,工作,简历
-ga_id: 'UA-92595311-1'
-age: 22岁
+update_time: '2018.03.01'
+name: 张源滨
+nickname: 34ko
+meta_content: 两年前端狗，HR姐姐们把我招到碗里去吧
+keywords: 前端,工作,简历
+age: 26岁
 gender: 男
-school: 西安电子科技大学
-profession: 软件工程
-grade: 大四
+school: 广东工业大学
+profession: 电子信息工程
 english_level: CET-6
-blog: https://www.xiao555.com.cn
-github: https://www.github.com/xiao555
+github: https://www.github.com/zybbyzaa
 website: 
-online: https://xiao555.github.io/Resume/
-print: https://xiao555.github.io/Resume/print.html
+online: https://zybbyzaa.github.io/Resume/
+print: https://zybbyzaa.github.io/Resume/print.html
 apply_to_position: Web前端工程师
 description: !!md |
   我叫张睿武，西电软件学院大四学生，现在在腾讯TEG实习，负责前端开发。自学web前端，后端Node.js，PHP 也略知一二。能折腾，喜欢在实践中学习，学Vue的时候就是看两天文档，然后直接用在写个人博客上，在不断的跳坑脱坑中进步。希望在工作中能应用到自己所学的东西，跟产品一同成长。
@@ -23,11 +20,11 @@ contact: # 联系方式
   -
     icon: fa-envelope
     name: Email
-    value: zhangruiwu32@gmail.com
+    value: zybbyzaa@163.com
   -
     icon: fa-qq
     name: QQ
-    value: '1335497539'
+    value: '532394460'
   -
     icon: fa-phone-square
     name: PhoneNumber
@@ -41,11 +38,8 @@ tech: # 技能点
     name: JavaScript
     percentage: 60%
   -
-    name: PHP
-    percentage: 50%
-  -
     name: Git
-    percentage: 60%
+    percentage: 40%
   -
     name: Node.js
     percentage: 40%
@@ -54,54 +48,51 @@ experience: # 项目经验
     section: 个人项目
     project:
       -
-        name: nunjucks-extend-loader
-        date: 2017.2
+        name: diy-phone
+        date: 2017.10 - 2017.11
         img:
         website:
-        source_code: https://github.com/xiao555/nunjucks-extend-loader
+        source_code: 
         des: !!md |
-          开发了一个多页应用脚手架[Webjucks](https://github.com/xiao555/Webjucks)，开发框架的过程中，自己写了个loader，已发布在npm上。用 Node的fs模块递归创建不存在的目录，最后通过回调函数完成最后一步copy文件的动作。
+          这是一个在线定制手机壳的小程序项目。
       -
-        name: Resume-it
-        date: 2017.2
+        name: fn-workflow
+        date: 2016.9 - 2017.9
         img:
         website:
-        source_code: https://github.com/xiao555/Resume-it
+        source_code: https://github.com/zybbyzaa/fn-workflow
         des: !!md |
-          知乎上看大家的简历，感觉模板很多，但个人信息是不变的，所以我就想搞一个数据模板分离的简历生成器，这样无论换模板还是改数据都非常方便。暂时 48 star，21 fork，有人用是最好的。
-          
-          最初是用webpack打包的，后来换成了Gulp，简单易用，不必上webpack，后面打算改造成页面可以直接修改的。
+          基于Gulp开发的构建工具，部分功能参考tmt-workflow并结合实际开发需求增加了样式预处理，文件版本缓存，测试环境接口代理，本地html模板处理等功能，有效提高了公司前端开发效率
       -
-        name: Blog
-        date: 2017.4-至今
+        name: 其他小项目
+        date: 
         img:
         website:
-        source_code: https://github.com/xiao555/blog
+        source_code: 
         des: !!md |
-          用来练手Vue的项目，基于Koa2 + Vue2 + MongoDB + Redis 搭建的 前后端分离 + RESTful API + SSR 的博客系统，并且进行了性能优化，加快首屏渲染速度。
-          
-          最近参考vue-hacknews2.0对前端部分进行了一次重构，新版本的webpack打包体积好小，实现了按需加载css，服务器部分也正准备上docker，正在写dockerfile中...
+          [[ZBlog]](https://github.com/zybbyzaa/ZBlog "大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统")大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统。学习react相关技术栈的练手项目，后端使用koa + mongodb开发数据接口。
+
+          [[NodejsBlog]](https://github.com/zybbyzaa/NodejsBlog "nodejs练习项目，基于express + MongoDB + ejs 搭建的博客")nodejs练习项目，基于express + MongoDB + ejs 搭建的博客。
+
+          俄罗斯方块小游戏
   -
-    section: 实习经历
+    section: 工作经历
     exper:
       - 
-        company: 腾讯
-        time: 2017.7.14 - 2017.9.1
+        company: 深圳爱拼信息技术有限公司
+        time: 2016.3 - 2016.7
+        position: 前端实习
         desc: !!md |
-          在TEG研发管理部TAPD中心实习，主要做前端方面的实现需求，解决bug等工作。
+          主要负责公司项目前端方面的需求实现，解决bug等工作。
         project:
           -
+            name: 完美志愿
             des: !!md |
               技术需求上，改造过内部的一个手机号验证组件，实现了多实例，状态保存等功能，在代码层面也做了优化，减少$的使用，重复运行的代码抽离出来等等。
           -
+            name: haohr
             des: !!md |
               业务需求上，在做官网轮播图需求的时候，把旧的代码封装成内部组件，并且可以绑定多个实例，实现代码的复用。
-          -
-            des: !!md |
-              在解决bug的过程中，也积累了不少经验，比如有ie下的background：rgba兼容性问题，通过google用filter解决的。
-          -
-            des: !!md |
-              在开发的过程中，我会思考怎么实现是最好的，团队的产品也教会了我认真做好每一个细节。在腾讯的人生第一次职场之旅，我觉得ok。
       - 
         company: WPNinja
         time: 2016.7 - 2017.5

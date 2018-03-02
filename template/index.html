@@ -10,7 +10,7 @@
         <ul class="side-info">
             <li class="someRight">
                 <dt><i class="fa fa-bookmark"></i>Basic info. 基本信息</dt>
-                <dd><span>个人信息:</span> {{ name }} / {{ gender }} / {{ age }} / {{ grade }}</dd>
+                <dd><span>个人信息:</span> {{ name }} / {{ gender }} / {{ age }}</dd>
                 <dd><span>学校：</span>{{school}}</dd>
                 <dd><span>专业：</span>{{profession}}</dd>
                 {% if english_level %}
@@ -108,7 +108,7 @@
                         <ul class="exp">
                             {% for item in exp.exper %}
                             <li>
-                                <h4>{{ item.company }} <span>{{ item.date }}</span></h4>
+                                <h4>{{ item.company }} ({{ item.position }})<span>{{ item.time }}</span></h4>
                                 <p>{{ item.desc | safe}}</p>
                                 <ul>
                                     {% for sub_item in item.project %}
