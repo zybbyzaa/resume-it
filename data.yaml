@@ -6,6 +6,7 @@ meta_content: 两年前端狗，HR姐姐们把我招到碗里去吧
 keywords: 前端,工作,简历
 age: 26岁
 gender: 男
+born: 广东汕头
 school: 广东工业大学
 profession: 电子信息工程
 english_level: CET-6
@@ -54,7 +55,9 @@ experience: # 项目经验
         website:
         source_code: 
         des: !!md |
-          这是一个在线定制手机壳的小程序项目。
+          一个手机壳定制小程序，实现了手机壳DIY、手机壳样式展示、手机壳购买等功能
+
+          同时使用react开发了一套后台管理系统，负责后台手机壳素材，订单等数据管理，系统使用webpack构建
       -
         name: fn-workflow
         date: 2016.9 - 2017.9
@@ -70,11 +73,11 @@ experience: # 项目经验
         website:
         source_code: 
         des: !!md |
-          [[ZBlog]](https://github.com/zybbyzaa/ZBlog "大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统")大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统。学习react相关技术栈的练手项目，后端使用koa + mongodb开发数据接口。
+          [[ZBlog]](https://github.com/zybbyzaa/ZBlog "大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统")大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统。目的是学习react相关技术栈，同时进一步熟悉以nodejs为后端服务的完整项目开发流程，后端开发使用koa + mongodb为主。
 
-          [[NodejsBlog]](https://github.com/zybbyzaa/NodejsBlog "nodejs练习项目，基于express + MongoDB + ejs 搭建的博客")nodejs练习项目，基于express + MongoDB + ejs 搭建的博客。
+          [[NodejsBlog]](https://github.com/zybbyzaa/NodejsBlog "nodejs练习项目，基于express + MongoDB + ejs 搭建的博客")nodejs练习项目，基于express + MongoDB + ejs 搭建的博客。首次尝试使用nodejs进行web后端开发，提高了我对前后端数据交互的理解。
 
-          俄罗斯方块小游戏
+          俄罗斯方块小游戏，游戏界面使用canvas绘制，通过localstorage保存游戏数据。
   -
     section: 工作经历
     exper:
@@ -82,65 +85,60 @@ experience: # 项目经验
         company: 深圳爱拼信息技术有限公司
         time: 2016.3 - 2016.7
         position: 前端实习
-        desc: !!md |
-          主要负责公司项目前端方面的需求实现，解决bug等工作。
         project:
           -
             name: 完美志愿
             des: !!md |
-              技术需求上，改造过内部的一个手机号验证组件，实现了多实例，状态保存等功能，在代码层面也做了优化，减少$的使用，重复运行的代码抽离出来等等。
-          -
-            name: haohr
-            des: !!md |
-              业务需求上，在做官网轮播图需求的时候，把旧的代码封装成内部组件，并且可以绑定多个实例，实现代码的复用。
+              负责完美志愿PC端和H5部分模块的页面重构实现与bug修复。
+
+              负责后端nodejs层数据接口接入，使用ejs模版进行页面数据渲染
+
+              主要技术栈包括sass、requirejs、jquery，koa，ejs...
+            website: https://www.wmzy.com
       - 
-        company: WPNinja
-        time: 2016.7 - 2017.5
-        desc: 这是一个面向国外客户的远程开发团队，基于wordpress搭建网站，前五个月我负责前端部分的开发, 最大程度的还原设计稿，完成页面交互，后面开始负责后端PHP开发。
+        company: 摸金狗经济咨询有限公司
+        time: 2016.7 - 至今
+        position: 前端开发工程师
+        desc: 
         project:
           -
-            name: SSRGA
+            name: 蜂鸟金融网站
             date: '2016.7'
-            img: https://xiao555.netlify.com/ssrga.jpg
-            website: http://www.ssrga.com/
+            website: https://www.fengniaojr.com/
             source_code:
             des: !!md |
-              这是我接手的第一个项目，为了适应团队框架完成页面我快速学习了模板引擎Nunjucks，CSS预处理器Stylus，数据层YAML语法等等。
-              然后在实践中巩固，最终一个周左右实现了这个项目的前端部分。
+              主要负责网站前端页面实现，交付给后端进行数据对接
+
+              为项目引入sass作为css预处理器，提高样式的开发效率
           -
-            name: Clubfit
-            date: '2016.8'
-            img: https://xiao555.netlify.com/clubfit.jpg
-            website: http://clubfit.vwmdev.com/
+            name: 迅雷爱交易
+            date: '2016.11'
             source_code:
             des: !!md |
-              接手这个项目时已经对团队的框架比较熟悉了，这个项目也包括了很多页面组件，算是强化练习吧。每天的代码leader会review，我再相应的做出修改，整个过程下来收获很多，是一次蜕变。
+             该项目作为公司当时的主要业务，一个白银现货交易平台，由我独立负责该项目前端的相关工作。
+
+             本项目首次尝试使用react进行开发，我负责相关技术选型，前端项目搭建，项目需求实现以及项目优化等工作，解决开发过程出现的项目运行卡顿，与后端数据对接困难等问题。
+            
+             相关技术栈有webpack、react、react-router、redux、websocket、protbuffer...
           -
-            name: taldumande
-            date: '2016.9'
-            img: https://xiao555.netlify.com/taldumande.jpg
-            website: https://www.taldumande.org.au/
+            name: 小游戏项目
+            date: '2017.3'
             source_code:
             des: !!md |
-              这是项目前端已经能完全独立完成了，设计也有很多有趣的地方，像header，footer部分两种颜色，为了不影响其它布局也比较方便用伪元素解决。没有很难的地方，细节很多，也比较考验布局能力。
+              同样是基于react开发的一系列竞猜类小游戏，不再使用redux作为数据状态管理框架，改用了相对轻量简单的mobx框架维护页面数据。
+
+              和以往项目相比，设计上增加了许多动效来增加游戏的趣味性，使用css3动画实现了曲线运动、序列帧动画等效果。
           -
-            name: workforceprofessionals
-            date: '2016.10'
-            img: https://xiao555.netlify.com/workforceprofessionals.jpg
-            website: https://workforceprofessionals.org/
+            name: 贷款中介项目
+            date: '2017.7'
+            website: http://www.xunleiyidai.com/
             source_code:
             des: !!md |
-              这个项目我负责后端，跟leader语音交流了一下后端框架的用法，研究了两三天大体了解了基于wordpress的后端的工作方式，于是用边写边学的方式完成了这个项目。我做的就是写项目有关的逻辑，数据的导入获取等等。
-              另外，首页的下面的Twitter部分是我写的，之前获取tweet的方法需要各种key麻烦还有问题，我查了好久找到一个相关的js库Twitter-Post-Fetcher，使用简单。
-          # -
-          #   name: innerdoor
-          #   date: 2016.11 - 至今
-          #   img: https://xiao555.netlify.com/innerdoor.jpg
-          #   website: http://innerdoor.vwmdev.com/
-          #   source_code:
-          #   des: !!md |
-          #     这个项目相当于一个会员系统，数据都是通过API来获取的，有大量的表格，需要从API获取大量的数据，处理数据，渲染到前端页面上。
-          #     一开始我写了一堆if-else，数据跟表单一一对应，后来发现这样做代码量很大，而且不够灵活。后来重新安排数据结构，用label作为key值，前端表单label作为value值，通过模板引擎跟后端对应起来，这样既大大减少了代码量，也提高了灵活性。
+              这个项目分为线上贷款的叮叮有钱和线下贷款的叮叮信用两个应用，其中叮叮信用只在移动端上线。
+              
+              叮叮有钱由于需要PC要兼容IE8采用以往的开发方式，配合使用gulp开发的构建工具进行开发。
+
+              叮叮信用则使用react进行开发并针对之前使用react遇到的一些问题进行了优化和改进
 skill: # 技能清单
       -
         des: !!md |
