@@ -1,5 +1,10 @@
 @import 'lib/lib-variables.scss';
 
+html,
+body
+{
+    height: 100%;
+}
 body.print
 {
     min-width: 0;
@@ -7,10 +12,10 @@ body.print
     {
         position: relative;
 
-        clear: both;
+        overflow: auto;
 
         width: 1080px;
-        margin: 0;
+        margin: 0 auto;
 
         background-color: #00bfa5;
     }

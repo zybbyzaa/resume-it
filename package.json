@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gulp",
     "build": "NODE_ENV=production gulp",
+    "build_win": "set NODE_ENV=production && gulp",
     "public": "rimraf dist && npm run build && node public.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

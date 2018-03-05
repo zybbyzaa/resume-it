@@ -15,8 +15,6 @@ website:
 online: https://zybbyzaa.github.io/Resume/
 print: https://zybbyzaa.github.io/Resume/print.html
 apply_to_position: Web前端工程师
-description: !!md |
-  我叫张睿武，西电软件学院大四学生，现在在腾讯TEG实习，负责前端开发。自学web前端，后端Node.js，PHP 也略知一二。能折腾，喜欢在实践中学习，学Vue的时候就是看两天文档，然后直接用在写个人博客上，在不断的跳坑脱坑中进步。希望在工作中能应用到自己所学的东西，跟产品一同成长。
 contact: # 联系方式
   -
     icon: fa-envelope
@@ -29,7 +27,7 @@ contact: # 联系方式
   -
     icon: fa-phone-square
     name: PhoneNumber
-    value: '18729316081'
+    value: '13580521242'
 honor: # 奖项荣誉
 tech: # 技能点
   -
@@ -45,39 +43,6 @@ tech: # 技能点
     name: Node.js
     percentage: 40%
 experience: # 项目经验
-  -
-    section: 个人项目
-    project:
-      -
-        name: diy-phone
-        date: 2017.10 - 2017.11
-        img:
-        website:
-        source_code: 
-        des: !!md |
-          一个手机壳定制小程序，实现了手机壳DIY、手机壳样式展示、手机壳购买等功能
-
-          同时使用react开发了一套后台管理系统，负责后台手机壳素材，订单等数据管理，系统使用webpack构建
-      -
-        name: fn-workflow
-        date: 2016.9 - 2017.9
-        img:
-        website:
-        source_code: https://github.com/zybbyzaa/fn-workflow
-        des: !!md |
-          基于Gulp开发的构建工具，部分功能参考tmt-workflow并结合实际开发需求增加了样式预处理，文件版本缓存，测试环境接口代理，本地html模板处理等功能，有效提高了公司前端开发效率
-      -
-        name: 其他小项目
-        date: 
-        img:
-        website:
-        source_code: 
-        des: !!md |
-          [[ZBlog]](https://github.com/zybbyzaa/ZBlog "大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统")大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统。目的是学习react相关技术栈，同时进一步熟悉以nodejs为后端服务的完整项目开发流程，后端开发使用koa + mongodb为主。
-
-          [[NodejsBlog]](https://github.com/zybbyzaa/NodejsBlog "nodejs练习项目，基于express + MongoDB + ejs 搭建的博客")nodejs练习项目，基于express + MongoDB + ejs 搭建的博客。首次尝试使用nodejs进行web后端开发，提高了我对前后端数据交互的理解。
-
-          俄罗斯方块小游戏，游戏界面使用canvas绘制，通过localstorage保存游戏数据。
   -
     section: 工作经历
     exper:
@@ -139,19 +104,52 @@ experience: # 项目经验
               叮叮有钱由于需要PC要兼容IE8采用以往的开发方式，配合使用gulp开发的构建工具进行开发。
 
               叮叮信用则使用react进行开发并针对之前使用react遇到的一些问题进行了优化和改进
+  -
+    section: 个人项目
+    project:
+      -
+        name: diy-phone
+        date: 2017.10 - 2017.11
+        img:
+        website:
+        source_code: 
+        des: !!md |
+          一个手机壳定制小程序，实现了手机壳DIY、手机壳样式展示、手机壳购买等功能
+
+          同时使用react开发了一套后台管理系统，负责后台手机壳素材，订单等数据管理，系统使用webpack构建
+      -
+        name: fn-workflow
+        date: 2016.9 - 2017.9
+        img:
+        website:
+        source_code: https://github.com/zybbyzaa/fn-workflow
+        des: !!md |
+          基于Gulp开发的构建工具，部分功能参考tmt-workflow并结合实际开发需求增加了样式预处理，文件版本缓存，测试环境接口代理，本地html模板处理等功能，有效提高了公司前端开发效率
+      -
+        name: 其他小项目
+        date: 
+        img:
+        website:
+        source_code: 
+        des: !!md |
+          [[ZBlog]](https://github.com/zybbyzaa/ZBlog "大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统")大学毕设项目，基于Koa  + MongoDB + React + Redux 搭建的博客系统。目的是学习react相关技术栈，同时进一步熟悉以nodejs为后端服务的完整项目开发流程，后端开发使用koa + mongodb为主。
+
+          [[NodejsBlog]](https://github.com/zybbyzaa/NodejsBlog "nodejs练习项目，基于express + MongoDB + ejs 搭建的博客")nodejs练习项目，基于express + MongoDB + ejs 搭建的博客。首次尝试使用nodejs进行web后端开发，提高了我对前后端数据交互的理解。
+
+          俄罗斯方块小游戏，游戏界面使用canvas绘制，通过localstorage保存游戏数据。
 skill: # 技能清单
       -
         des: !!md |
-          能够用 HTML + CSS 编写语义化的代码，完成较复杂的布局，熟悉Stylus、PostCss 等css预处理、后处理工具
+          能够用 HTML + CSS 编写语义化的代码，完成较复杂的布局，熟悉Sass、PostCss 等css预处理、后处理工具
       -
         des: !!md |
-          在Blog项目中熟悉了 Vue，写过Vue的双向数据绑定[Demo](https://github.com/xiao555/Two-way-Data-Bindings)， 使用了 ES6、7 的新语法，了解 Node.js, jQuery.
+          有过多个react项目开发经验，熟悉react及相关框架的使用，能熟练使用es6编写代码
       -
         des: !!md |
-          熟悉 Git Webpack Gulp 等开发工具
+          能熟练使用webpack或gulp等构建工具进行前端项目打包与自动化构建工作，了解git，能使用git进行常见的项目代码管理操作
       -
         des: !!md |
-          熟悉 Koa, Express, MongoDB, Mysql 能搭建简单的后端项目，租了Digital Ocean 的VPS，腾讯云 部署网站
+          了解Nodejs、Koa、Express、MongoDB，能搭建简单的后端项目；了解nginx，能使用nginx进行静态文件访问代理和处理前端跨域请求
 
 
 ---
