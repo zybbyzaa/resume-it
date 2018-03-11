@@ -1,9 +1,8 @@
-Resume-it
+resume-it
 ======
 
 一个灵活的数据模板分离的在线简历生成器。
-效果：https://xiao555.github.io/Resume/
-如果喜欢的话请给个star ^_^
+效果：https://zybbzyaa.github.io/resume-it/
 
 ![](./resume.png)
 
@@ -79,6 +78,9 @@ npm run public
 
 2017.6.18
   调整结构，采用 Gulp 打包，public 用 `simple-git`, 不用shell脚本了
+
+2018.3.11
+  从[ xiao555/resume-it](https://github.com/xiao555/resume-it)fork项目，更新了自己的简历，并对部分内容进行修改
 
 ## LICENSE
 
