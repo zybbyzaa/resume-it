@@ -7,133 +7,36 @@ body
 }
 body.print
 {
-    min-width: 0;
-    .container
-    {
-        position: relative;
-
-        overflow: auto;
-
-        width: 1080px;
-        margin: 0 auto;
-
-        background-color: #00bfa5;
-    }
     .sidebar
     {
-        position: relative;
+        .avatar
+        {
+            height: 180px;
+            .avatar-img
+            {
+                width: 120px;
+                margin-top: 24px;
+            }
+        }
+        .personal-info
+        {
+            dd
+            {
+                line-height: 1.5;
 
-        float: left;
-
-        width: 330px;
-        margin-bottom: 0;
-        padding: 25px;
-    }
-    .side-info
-    {
-        li
-        {
-            padding-top: 20px;
-        }
-        dt
-        {
-            font-size: 20px;
-        }
-        dd
-        {
-            font-size: 16px;
+                transform: translateX(0);
+            }
         }
     }
-    .note
+    .container
     {
-        font-size: 20px;
-
-        margin-top: 100px;
-    }
-    .main
-    {
-        position: relative;
-        left: 0;
-
-        float: right;
-
-        box-sizing: border-box;
-        width: 750px;
-        padding: 10px 20px 126px 20px;
-    }
-    .main-info
-    {
-        & > li
+        .main
         {
-            padding-top: 10px;
+            padding-bottom: 70px;
+            .main-info .exp p
+            {
+                font-size: 18px;
+            }
         }
-        dt
-        {
-            font-size: 26px;
-        }
-        dd
-        {
-            font-size: 17px;
-        }
-        span
-        {
-            font-size: 18px;
-        }
-    }
-    h3
-    {
-        font-size: 20px;
-    }
-    h4
-    {
-        font-size: 20px;
-    }
-    h4 a,
-    h5 a
-    {
-        font-size: 14px;
-    }
-    h5
-    {
-        font-size: 18px;
-    }
-    .exp
-    {
-        margin-left: 15px;
-
-        border-left: 2px solid #00796b;
-        p
-        {
-            margin-bottom: 0;
-        }
-        & > li
-        {
-            margin: 10px 0 0 20px;
-        }
-        img
-        {
-            float: left;
-
-            width: 150px;
-            margin-right: 10px;
-        }
-    }
-    .skill .exp
-    {
-        border-left: 0;
-        li
-        {
-            margin-top: 10px;
-
-            list-style: circle;
-        }
-    }
-    .efe .task4img
-    {
-        height: 73px;
-    }
-    footer
-    {
-        display: none;
     }
 }

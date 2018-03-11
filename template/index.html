@@ -1,143 +1,102 @@
 {% extends 'base.html' %}
 {% block main %}
 <div class="container">
-    <div class="sidebar">
-        <div class="title">
+    <aside class="sidebar">
+        <div class="avatar">
             {% include 'head.html' %}
-            <h1>{{ name }}的简历</h1>
-            <h2>{{ des }}</h2>
         </div>
-        <ul class="side-info">
-            <li class="someRight">
+        <h1 class="title">
+            {{ name }}的简历
+        </h1>
+        {% set delay = 0.25 %}
+        <ul class="personal-info">
+            <li class="info-item">
                 <dt><i class="fa fa-bookmark"></i>Basic info. 基本信息</dt>
-                <dd><span>个人信息:</span> {{ name }} / {{ gender }} / {{ age }}</dd>
-                <dd><span>籍贯：</span>{{born}}</dd>
-                <dd><span>学校：</span>{{school}}</dd>
-                <dd><span>专业：</span>{{profession}}</dd>
+                <dd style="animation: slideOut .5s linear {{delay}}s forwards;"><span>个人信息:</span> {{ name }} / {{ gender }} / {{ age }}</dd>
+                <dd style="animation: slideOut .5s linear {{delay * 2}}s forwards;"><span>籍贯：</span>{{born}}</dd>
+                <dd style="animation: slideOut .5s linear {{delay * 3}}s forwards;"><span>学校：</span>{{school}}</dd>
+                <dd style="animation: slideOut .5s linear {{delay * 4}}s forwards;"><span>专业：</span>{{profession}}</dd>
                 {% if english_level %}
-                <dd><span>英语水平:</span> {{ english_level }}</dd>
+                <dd style="animation: slideOut .5s linear {{delay * 5}}s forwards;"><span>英语水平:</span> {{ english_level }}</dd>
                 {% endif %}
                 {% if nickname %}
-                <dd><span>常用ID:</span> {{ nickname }}</dd>
-                {% endif %}
-                {% if blog %}
-                <dd><span>Blog:</span> <a href="{{ blog }}" target="_blank">{{ blog }}</a></dd>
+                <dd style="animation: slideOut .5s linear {{delay * 6}}s forwards;"><span>常用ID:</span> {{ nickname }}</dd>
                 {% endif %}
                 {% if github %}
-                <dd><span>GitHub:</span> <a href="{{ github }}" target="_blank">{{ github }}</a></dd>
+                <dd style="animation: slideOut .5s linear {{delay * 7}}s forwards;"><span>GitHub:</span> <a class="info-link" href="{{ github }}" target="_blank">{{ github }}</a></dd>
                 {% endif %}
                 {% if online %}
-                <dd><span>在线简历:</span> <a href="{{ online }}" target="_blank">{{ online }}</a></dd>
+                <dd style="animation: slideOut .5s linear {{delay * 8}}s forwards;"><span>简历打印版:</span> <a class="info-link" href="{{ print }}" target="_blank">{{ print }}</a></dd>
                 {% endif %}
             </li>
-            <li class="someRight">
+            <li class="info-item">
                 <dt><i class="fa fa-bookmark"></i>Contact. 联系方式</dt>
                 {% for item in contact %}
-                    <dd><i class="fa {{ item.icon }}"></i>{{ item.name }}: <a {% if item.name == 'Email' %}href="mailto:{{ item.value }}"{% endif %} target="_blank">{{ item.value }}</a></dd>
+                    <dd style="animation: slideOut .5s linear {{delay * 8 + loop.index * delay}}s forwards;"><i class="fa {{ item.icon }}"></i>{{ item.name }}: <a class="info-link" {% if item.name == 'Email' %}href="mailto:{{ item.value }}"{% elif item.name == 'PhoneNumber' %}href="tel:{{ item.value }}"{% endif %} target="_blank">{{ item.value }}</a></dd>
                 {% endfor %}
             </li>
-            <li class="someRight">
+            <li class="info-item">
                 <dt><i class="fa fa-bookmark"></i>Application. 应聘岗位</dt>
-                <dd>{{ apply_to_position }}</dd>
+                <dd style="animation: slideOut .5s linear {{delay * 12}}s forwards;">{{ apply_to_position }}</dd>
             </li>
-            {% if honor %}
-            <li class="someRight">
-                <dt><i class="fa fa-bookmark"></i>Honor. 奖项荣誉</dt>
-                <dd>
-                    {% for item in honor %}
-                    <ul>
-                        <li>{{ item.date |safe }} {{ item.name |safe }}</li>
-                    </ul>
-                    {% endfor %}
-                </dd>
-            </li>
-            {% endif %}
             <li class="skill">
                 <dt><i class="fa fa-bookmark"></i>Tech. 主要技能点</dt>
                 {% for item in tech %}
-                <dd>
-                    <div class="skill-name">{{ item.name }}</div>
+                <dd style="animation: slideOut .5s linear {{delay * 12 + loop.index * delay}}s forwards;">
+                    <span class="skill-name">{{ item.name }}</span>
                     <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width: {{ item.percentage }}"></div>
+                        <div class="skill-bar" style="animation: percent{{item.rank}} .5s linear {{0.5 + delay * 12 + loop.index * delay}}s forwards"></div>
                     </div>
                 </dd>
                 {% endfor %}
             </li>
         </ul>
-        {% if intro %}
-        <div class="note">
-            {{ intro |safe }}
-        </div>
-        {% endif %}
-    </div>
-    <div class="main">
+    </aside>
+    <main class="main">
         <ul class="main-info">
+            <li class="evaluation">
+                <dt><i class="fa fa-bookmark"></i>Evaluation. 自我评价</dt>
+                <ul class="exp">
+                    <p>{{ intro }}</p>
+                </ul>
+            </li>
             <li class="skill">
                 <dt><i class="fa fa-bookmark"></i>Skill. 技能清单</dt>
-                {% for item in skill %}
                 <ul class="exp">
-                  <li>{{ item.des |safe }}</li>
-                </ul>
+                {% for item in skill %}
+                  <li><p>{{ item.des |safe }}</p></li>
                 {% endfor %}
+                </ul>
             </li>
             <li class="experience">
                 <dt><i class="fa fa-bookmark"></i>Experience. 项目经验</dt>
                 {% for exp in experience %}
-                    {% if exp.section == '工作经历' %}
-                        <h2 class="exp-title">{{exp.section}}</h2>
-                        <ul class="exp">
-                            {% for item in exp.exper %}
-                            <li>
-                                <h4>{{ item.company }} ({{ item.position }})<span>{{ item.time }}</span></h4>
-                                <p>{{ item.desc | safe}}</p>
-                                <ul>
-                                    {% for sub_item in item.project %}
-                                        <li>
-                                            <div class="circle"></div>
-                                            <h4>{{ sub_item.name }} {{ sub_item.date }}
-                                            {% if sub_item.website %}
-                                            <a href="{{ sub_item.website }}" target="_blank"><i class="fa fa-link"></i>Demo</a>
-                                            {% endif %}
-                                            {% if sub_item.source_code %}
-                                            <a href="{{ sub_item.source_code }}" target="_blank"><i class="fa fa-link"></i>SourceCode</a>
-                                            {% endif %}
-                                            </h4>
-                                            <div class="clearfix">
-                                            {% if sub_item.img %}<img src="{{ sub_item.img }}">{% endif %}
-                                            {{ sub_item.des |safe }}
-                                            </div>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    {% else %}
-                        <h2 class="exp-title">{{exp.section}}</h2>
-                        <ul class="exp">
-                            {% for item in exp.project %}
-                            <li>
-                                <div class="circle"></div>
-                                <h4>{{ item.name }} {{ item.date }}
-                                {% if item.website %}
-                                <a href="{{ item.website }}" target="_blank"><i class="fa fa-link"></i>Demo</a>
-                                {% endif %}
-                                {% if item.source_code %}
-                                <a href="{{ item.source_code }}" target="_blank"><i class="fa fa-link"></i>SourceCode</a>
-                                {% endif %}
-                                </h4>
-                                <div class="clearfix">
-                                {% if item.img %}<img src="{{ item.img }}">{% endif %}
-                                {{ item.des |safe }}
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                
+                    <h2 class="experience-title">{{exp.section}}</h2>
+                    <ul class="exp">
+                        {% for item in exp.exper %}
+                        <li>
+                            <h4 class="exp-title">{{ item.company }} ({{ item.position }})<span>{{ item.time }}</span></h4>
+                            <p>{{ item.desc | safe}}</p>
+                            <h4 class="exp-title exp-sub-title">{{ item.project }}</h4>
+                            <ul>
+                                {% for detail in item.details %}
+                                    <li>
+                                       <p>{{ detail.des |safe }}</p>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            <p>相关技能：{{ item.skills}}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 {% endfor %}
             </li>
         </ul>
-    </div>
+    </main>
 </div>
+<footer class="footer">
+    <p>
+        Theme by <a {% if website %}href="{{ website }}"{% else %}{% if github %}href="{{ github }}"{% endif %}{% endif %} target="_blank">{{ nickname }}</a>. Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by <a href="https://github.com/zybbyzaa/resume-it" target="_blank">resume-it</a>. 最后更新于{{ update_time }}
+    </p>
+</footer>
 {% endblock %}
