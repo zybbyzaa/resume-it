@@ -2458,215 +2458,145 @@ i {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.clearfix {
-  clear: both; }
-
 body {
   font-family: 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, 'Hiragino Sans GB', '微软雅黑', 'WenQuanYi Micro Hei', STHeiti, SimSun, sans-serif;
   min-width: 1080px;
   background: #e0e0e0; }
 
-h1 {
-  font-size: 28px;
-  font-weight: normal; }
-
-h2 {
-  font-size: 22px;
-  font-weight: 800;
-  color: #004d40; }
-  h2.exp-title {
-    margin: 10px 0; }
-
-h3 {
-  font-size: 19px;
-  font-weight: bold;
-  margin: 0 0 15px 5px;
-  color: #004d40; }
-
-h4 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  position: relative;
-  bottom: 3px;
-  color: #000; }
-
-h5 {
-  font-size: 16px;
-  line-height: 25px;
-  clear: both;
-  color: #000; }
-
-h4 a,
-h5 a {
-  font-size: 12px;
-  margin-left: 7px;
-  padding: 1px 3px;
-  text-decoration: none;
-  border: 1px solid #4db6ac;
-  border-radius: 5px; }
-
 .container {
-  position: relative;
-  width: 1060px;
-  margin: 10px auto;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 1080px;
+  margin: 0 auto;
   border-radius: 4px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  .container .fa {
+    padding-right: 5px;
+    vertical-align: baseline; }
+  .container .sidebar {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 300px;
+    padding: 15px 15px;
+    color: #fff;
+    background: #00bfa5; }
+    .container .sidebar .avatar {
+      width: 150px;
+      height: 200px;
+      margin: 0 auto;
+      text-align: center; }
+    .container .sidebar .title {
+      font-size: 28px;
+      text-align: center; }
+    .container .sidebar .personal-info .info-item {
+      overflow: hidden; }
+    .container .sidebar .personal-info .info-link {
+      color: #fff; }
+    .container .sidebar .personal-info .skill dd {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .container .sidebar .personal-info .skill .skill-name {
+      font-size: 14px;
+      width: 32%; }
+    .container .sidebar .personal-info .skill .skill-bar-wrap {
+      display: inline-block;
+      width: 60%;
+      height: 16px;
+      border-radius: 16px;
+      background: #00796b; }
+      .container .sidebar .personal-info .skill .skill-bar-wrap:hover {
+        -webkit-box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 10px #fff; }
+      .container .sidebar .personal-info .skill .skill-bar-wrap .skill-bar {
+        width: 0;
+        height: 16px;
+        border-radius: 16px 0 0 16px;
+        background: #fff; }
+    .container .sidebar .personal-info dt {
+      font-size: 18px;
+      line-height: 40px;
+      color: #9f3; }
+    .container .sidebar .personal-info dd {
+      font-size: 14px;
+      line-height: 20px;
+      margin-left: 18px;
+      -webkit-transform: translateX(-120%);
+      transform: translateX(-120%); }
+  .container .main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 15px 20px;
+    background: #f0f2f1; }
+    .container .main a {
+      color: #4db6ac; }
+    .container .main .main-info > li {
+      padding-top: 20px; }
+    .container .main .main-info dt {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 15px -5px;
+      color: #00796b;
+      border-bottom: 1px solid #00796b; }
+    .container .main .main-info .exp {
+      border-left: 2px solid #00796b; }
+      .container .main .main-info .exp .circle {
+        position: absolute;
+        top: 5px;
+        left: -28px;
+        float: left;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        background: #00796b; }
+      .container .main .main-info .exp .exp-title {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 30px;
+        position: relative;
+        bottom: 3px;
+        padding-left: 15px;
+        color: #000; }
+      .container .main .main-info .exp .exp-sub-title {
+        font-size: 15px;
+        padding-left: 51px; }
+      .container .main .main-info .exp p {
+        font-size: 16px;
+        margin-bottom: 3px;
+        padding-left: 15px;
+        color: #616161; }
+      .container .main .main-info .exp img {
+        float: left;
+        width: 150px;
+        margin-right: 10px; }
+    .container .main .main-info .evaluation p,
+    .container .main .main-info .experience p {
+      text-indent: 2em; }
+    .container .main .main-info .experience .experience-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #004d40; }
 
-.sidebar {
-  line-height: 1.5;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 300px;
-  padding: 15px 15px;
-  color: #fff;
-  background: #00bfa5; }
-  .sidebar a {
-    color: #fff; }
-
-.title {
-  margin: 25px 0 20px;
-  text-align: center; }
-  .title img {
-    display: block;
-    width: 120px;
-    margin: 0 auto 15px; }
-
-.side-info li {
-  padding-top: 20px; }
-
-.side-info dt {
-  font-size: 18px;
-  line-height: 40px;
-  color: #9f3; }
-
-.side-info dd {
-  font-size: 14px;
-  line-height: 20px; }
-
-.someRight dd {
-  margin-left: 25px; }
-
-.skill {
-  position: relative; }
-
-.skill-name {
-  font-size: 14px;
-  position: relative;
-  top: -3px;
-  left: 25px;
-  display: inline-block;
-  width: 100px; }
-
-.skill-bar-wrap {
-  display: inline-block;
-  width: 150px;
-  height: 17px;
-  border-radius: 20px;
-  background: #00796b; }
-
-.skill-bar {
-  height: 17px;
-  border-radius: 20px 0 0 20px;
-  background: #fff; }
-
-.note {
-  font-size: 18px;
-  margin-top: 90px;
-  text-indent: 2em;
-  color: #004d40; }
-
-.main {
-  position: relative;
-  left: 300px;
-  width: 720px;
-  padding: 15px 20px;
-  background: #f0f2f1; }
-  .main a {
-    color: #4db6ac; }
-
-.main-info > li {
-  padding-top: 20px; }
-
-.main-info dt {
-  font-size: 24px;
-  line-height: 30px;
-  margin: 0 0 15px -5px;
-  color: #00796b;
-  border-bottom: 1px solid #00796b; }
-
-.main-info dd {
-  font-size: 15px;
-  line-height: 27px;
-  color: #616161; }
-
-.main-info span {
-  font-size: 16px;
-  color: #000; }
-
-.fa {
-  margin-right: 2px; }
-
-.circle {
-  position: absolute;
-  top: 5px;
-  left: -28px;
-  float: left;
-  width: 14px;
-  height: 14px;
-  border-radius: 100%;
-  background: #00796b; }
-
-.exp {
-  margin-left: 15px;
-  border-left: 2px solid #00796b; }
-  .exp p {
-    font-size: 15px;
-    line-height: 22px;
-    margin-bottom: 3px;
-    color: #616161; }
-  .exp img {
-    float: left;
-    width: 150px;
-    margin-right: 10px; }
-  .exp > li {
-    position: relative;
-    top: -5px;
-    margin: 20px 0 20px 20px; }
-  .exp ul > li {
-    margin: 0 0 5px 0; }
-
-.experience p {
-  text-indent: 20px; }
-
-.skill .exp {
-  border-left: 0; }
-  .skill .exp li {
-    list-style: circle; }
-
-.efe .task4img img {
-  width: inherit;
-  height: 97px; }
-
-footer {
+.footer {
   margin: 30px 0 20px; }
-  footer p {
+  .footer p {
     font-size: 14px;
     text-align: center;
     color: #616161; }
-  footer a {
+  .footer a {
     color: #616161; }
 
 .throb {
   -webkit-animation: throb 1.33s ease-in-out infinite;
   animation: throb 1.33s ease-in-out infinite; }
-
-svg {
-  size: 150px 200px; }
 
 @-webkit-keyframes throb {
   0% {
@@ -2712,75 +2642,64 @@ svg {
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
+@-webkit-keyframes slideOut {
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes slideOut {
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@-webkit-keyframes percent1 {
+  to {
+    width: 25%; } }
+
+@keyframes percent1 {
+  to {
+    width: 25%; } }
+
+@-webkit-keyframes percent2 {
+  to {
+    width: 50%; } }
+
+@keyframes percent2 {
+  to {
+    width: 50%; } }
+
+@-webkit-keyframes percent3 {
+  to {
+    width: 75%; } }
+
+@keyframes percent3 {
+  to {
+    width: 75%; } }
+
+@-webkit-keyframes percent4 {
+  to {
+    width: 100%; } }
+
+@keyframes percent4 {
+  to {
+    width: 100%; } }
+
 html,
 body {
   height: 100%; }
 
-body.print {
-  min-width: 0; }
-  body.print .container {
-    position: relative;
-    overflow: auto;
-    width: 1080px;
-    margin: 0 auto;
-    background-color: #00bfa5; }
-  body.print .sidebar {
-    position: relative;
-    float: left;
-    width: 330px;
-    margin-bottom: 0;
-    padding: 25px; }
-  body.print .side-info li {
-    padding-top: 20px; }
-  body.print .side-info dt {
-    font-size: 20px; }
-  body.print .side-info dd {
-    font-size: 16px; }
-  body.print .note {
-    font-size: 20px;
-    margin-top: 100px; }
-  body.print .main {
-    position: relative;
-    left: 0;
-    float: right;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 750px;
-    padding: 10px 20px 126px 20px; }
-  body.print .main-info > li {
-    padding-top: 10px; }
-  body.print .main-info dt {
-    font-size: 26px; }
-  body.print .main-info dd {
-    font-size: 17px; }
-  body.print .main-info span {
+body.print .sidebar .avatar {
+  height: 180px; }
+  body.print .sidebar .avatar .avatar-img {
+    width: 120px;
+    margin-top: 24px; }
+
+body.print .sidebar .personal-info dd {
+  line-height: 1.5;
+  -webkit-transform: translateX(0);
+  transform: translateX(0); }
+
+body.print .container .main {
+  padding-bottom: 70px; }
+  body.print .container .main .main-info .exp p {
     font-size: 18px; }
-  body.print h3 {
-    font-size: 20px; }
-  body.print h4 {
-    font-size: 20px; }
-  body.print h4 a,
-  body.print h5 a {
-    font-size: 14px; }
-  body.print h5 {
-    font-size: 18px; }
-  body.print .exp {
-    margin-left: 15px;
-    border-left: 2px solid #00796b; }
-    body.print .exp p {
-      margin-bottom: 0; }
-    body.print .exp > li {
-      margin: 10px 0 0 20px; }
-    body.print .exp img {
-      float: left;
-      width: 150px;
-      margin-right: 10px; }
-  body.print .skill .exp {
-    border-left: 0; }
-    body.print .skill .exp li {
-      margin-top: 10px;
-      list-style: circle; }
-  body.print .efe .task4img {
-    height: 73px; }
-  body.print footer {
-    display: none; }
